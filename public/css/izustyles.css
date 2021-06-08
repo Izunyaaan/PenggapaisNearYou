@@ -1,0 +1,57 @@
+/*=============================================
+    Table of Content:
+        1) Global Styles
+        2) Layouts
+        3) Typography
+        4) Components
+
+==============================================*/
+
+/*================================================
+    1) Global Styles
+================================================*/
+/*Variables*/
+:root{
+    --primary-color:blue;
+    --secondary-color:blue;
+    --main-bg-color:blue;
+    --secondary-bg-color:blue;
+    --highlight-color:blue;
+    --secondary-highlight-color:blue;
+}
+
+*{
+    padding:0px;
+    margin:0px;
+}
+/*smooth scrolling*/
+html,
+body{
+    scroll-behavior: smooth;
+    background-color: var(--main-bg-color);
+}
+
+/*===========================================================
+    2) Layouts
+===========================================================*/
+/*medium/big screen layouts*/
+@media (min-width:800px){
+    nav{
+        display:flex;
+        width:100vw;
+        max-width:100%;
+        height: clamp(150px 20% 500px);
+        background-color: var(--primary-color);
+    }
+}
+/*small screen layouts*/
+@media(max-width:799px){
+
+}
+/*===========================================================
+    3) Typography
+============================================================*/
+
+/*===========================================================
+    4) Components
+============================================================*/

@@ -1,2 +1,6 @@
 # PenggapaisNearYou
- CodingBN Month 3 Group Projecy
+
+CodingBN Month 3 Group Project
+
+#Members:
+FWS
