@@ -4,6 +4,9 @@ const app = express();
 //declare port
 const PORT = process.env.PORT || 3000;
 
+//declare path
+const path = require('path');
+
 //set views folder and view engine
 app.set('views', path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
@@ -13,7 +16,7 @@ app.use(express.static('public'));
 
 //use urlencoder for parsing request body
 app.use(express.urlencoded({
-    extended=false
+    extended: false
 }));
 
 //database shit
