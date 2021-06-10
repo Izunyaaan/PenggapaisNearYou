@@ -1,0 +1,52 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #faedcd;
+	color: #b48352;
+}
+
+.row2 {
+	padding-left: 50px;
+}
+
+#home {
+	padding: 50px 0 200px 0;
+}
+
+.main {
+	text-align: center;
+	padding-top: 70px;
+}
+
+#intro {
+	text-align: center;
+	padding-top: 90px;
+	padding-left: 30px;
+}
+
+#searchbox {
+	padding-top: 90px;
+	padding-left: 55px;
+}
+
+/*--------*/
+
+#about {
+	text-align: center;
+	padding-top: 30px;
+}
+
+/* Search Page */
+
+.result {
+	padding: 0px 50px 50px 50px;
+}
+
+.test {
+	border: solid 2px red;
+	border-radius: 3em;
+	-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	-ms-border-radius: 3em;
+	-o-border-radius: 3em;
+}
