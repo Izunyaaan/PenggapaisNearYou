@@ -156,6 +156,7 @@ h1 {
 }
 .profilePic {
 	box-shadow: var(--secondary-highlight-color-trans) 0.75ch 0.5ch;
+	width: 95%;
 }
 fieldset {
 	padding: 1rem 0;

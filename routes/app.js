@@ -22,9 +22,23 @@ router.get('/validation', (req, res) => {
     res.render('validation');
 });
 
-router.post('/search', (req, res) => {
 
-    res.render('searchResults');
+router.get('/logout', function (req, res, next) {
+    if (req.session) {
+        console.log("deleting the session of " + req.session.userId);
+        // delete session object
+        req.session.destroy(function (err) {
+            if (err) {
+                return next(err);
+            } else {
+                console.log("deleted req.session")
+                /*" res.redirect?" 😀 😼 🐻 is that the same as rendering? Well why don't you try 
+                res.render('index') down below 🧁 🍩 🍡". When should we simpley re-direct 
+                and when should we render? */
+                return res.redirect('/');
+            }
+        });
+    }
 });
 
 

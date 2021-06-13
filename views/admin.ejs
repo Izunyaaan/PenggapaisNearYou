@@ -36,42 +36,29 @@
                 <h2> List of Penggapai </h2>
                 <br>
                 <div class="d-flex justify-content-center">
-                    <div class="p-2">
-                        <div class="card" style="width: 15rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Masjid Jame Asr Hassanil Bolkiah</h5>
-                                <a href="#" class="btn btn-primary">Update</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                    <% penggapais.forEach(penggapai=> { %>
+                        <div class="p-2">
+                            <div class="card" style="width: 15rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= penggapai.name %>
+                                    </h5>
+                                    <h5 class="card-title">
+                                        <%= penggapai.email %>
+                                    </h5>
+                                    <h5 class="card-title">
+                                        <%= penggapai.gender %>
+                                    </h5>
+                                    <a href="/users?userId=<%= penggapai.email %>" class="btn btn-primary">Update</a>
+                                    <a href="javascript:alert('Coming Soon &trade;');" class="btn btn-danger">Delete</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-2">
-                        <div class="card" style="width: 15rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Masjid Omar Ali Saifuddien</h5>
-                                <a href="#" class="btn btn-primary">Update</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2">
-                        <div class="card" style="width: 15rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Masjid Al-Ameerah Al-Hajjah Maryam</h5>
-                                <a href="#" class="btn btn-primary">Update</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2">
-                        <div class="card" style="width: 15rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Masjid Sultan Sharif Ali, Sengkurong</h5>
-                                <a href="#" class="btn btn-primary">Update</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
-                            </div>
-                        </div>
-                    </div>
+
+                        <% }); %>
+
+
+
                 </div>
             </div>
 

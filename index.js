@@ -16,13 +16,30 @@ app.use(express.static('public'));
 
 //use urlencoder for parsing request body
 app.use(express.urlencoded({
-    extended: false
+    extended: true
 }));
 
 //database shit
 const mongoose = require('mongoose');
 const db = require('./config/keys.js').MongoURI;
+mongoose.connect(db, { useNewUrlParser: true })
+    .then(() => console.log("MongoDB connected"))
+    .catch(err => console.log(err));
 
+//sessions stuff
+
+const session = require('express-session');
+app.use(session({
+    secret: 'Planet earth',
+    resave: true,
+    saveUninitialized: false
+}));
+
+// make user ID available in templates
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.session.userId;
+    next();
+});
 //routes
 const router = require('./routes/app.js');
 app.use('/', router);
