@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 //declare port
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 1337;
 
 //declare path
 const path = require('path');
@@ -21,10 +21,12 @@ app.use(express.urlencoded({
 
 //database shit
 const mongoose = require('mongoose');
-const db = require('./config/key.js').MongoURI;
+const db = require('./config/keys.js').MongoURI;
 
 //routes
 const router = require('./routes/app.js');
 app.use('/', router);
+const users = require('./routes/protected.js');
+app.use('/users', users);
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));

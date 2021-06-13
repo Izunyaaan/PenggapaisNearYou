@@ -23,31 +23,32 @@
         <main>
             <section class="picture">
                 <img src="<%= picture %>" alt="Profile picture" class="profilePic">
+                <p><span class="editButton">Edit</span></p>
             </section>
             <section class="content">
                 <h1>
-                    <%= name %>
+                    <%= name %> <span class="editButton">Edit</span>
                 </h1>
                 <fieldset>
-                    <legend>&nbsp;Phone number:</legend>
+                    <legend>&nbsp;Phone number: <span class="editButton">Edit</span></legend>
                     <p>
                         <%= telephoneNumber %>
                     </p>
                 </fieldset>
                 <fieldset>
-                    <legend>&nbsp;Address:</legend>
+                    <legend>&nbsp;Address: <span class="editButton">Edit</span></legend>
                     <p>
                         <%= address %>
                     </p>
                 </fieldset>
                 <fieldset>
-                    <legend>&nbsp;Area of activity:</legend>
+                    <legend>&nbsp;Area of activity: <span class="editButton">Edit</span></legend>
                     <p>
                         <%= areaOfActivity %>
                     </p>
                 </fieldset>
                 <fieldset>
-                    <legend>&nbsp;Comment:</legend>
+                    <legend>&nbsp;Comment: <span class="editButton">Edit</span></legend>
                     <p>
                         <%= comment %>
                     </p>
