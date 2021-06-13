@@ -122,7 +122,7 @@ router.get('/', (req, res) => {
             });
         } else {
             console.log("qwerty");
-            res.render('Penggapai', {
+            res.render('penggapai', {
                 loginStatus: { state: "Login", url: "login" },
                 picture: user.picture,
                 name: user.name,
