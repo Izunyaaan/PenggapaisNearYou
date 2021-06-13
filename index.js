@@ -28,7 +28,7 @@ mongoose.connect(db, { useNewUrlParser: true })
 
 //sessions stuff
 
-const session = require('express-session');
+const session = require('cookie-session');
 app.use(session({
     secret: 'Planet earth',
     resave: true,
